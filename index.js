@@ -56,3 +56,30 @@ myButton.onclick = function(){
   label2.textContent = randomNum2;
   label3.textContent = randomNum3;
 } THE 4.5TH ONE */
+
+const myText = document.getElementById("myText");
+const mySubmit = document.getElementById("mySubmit");
+const resultElement = document.getElementById("resultElement");
+
+let age;
+
+mySubmit.onclick = function(){
+  age = myText.value;
+  age = Number(age);
+
+  if (age >=100){
+    resultElement.textContent = `1`;
+  }
+  else if(age == 0){
+    resultElement.textContent = `2`;
+  }
+  else if(age >=18){
+    resultElement.textContent = `3`;
+  }
+  else if(age < 0){
+    resultElement.textContent = `4`;
+  }
+  else{
+    resultElement.textContent = `5`;
+  }
+}
