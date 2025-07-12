@@ -83,7 +83,7 @@ mySubmit.onclick = function(){
     resultElement.textContent = `5`;
   } THE 5TH ONE*/
 
-  const myCheckBox = document.getElementById("myCheckBox");
+  /*const myCheckBox = document.getElementById("myCheckBox");
   const visaBtn = document.getElementById("visaBtn");
   const masterCardBtn = document.getElementById("masterCardBtn");
   const payPalBtn = document.getElementById("payPalBtn");
@@ -112,4 +112,35 @@ mySubmit.onclick = function(){
     else{
       paymentResult.textContent = `You must select a payment type`;  
     }
+  } THE 6TH ONE */
+
+  /*let username = "";
+  if (username === ""){
+    console.log(`You didnt enter your name`);
   }
+  else{
+    console.log(`Hello ${username}`);
+  }
+
+  let username = "";
+  while (username === "" || username === null){
+    username = window.prompt(`Enter your username`);
+  }
+  console.log(`Hello ${username}`); THE 7TH ONE*/
+
+ /* let loggedIn = false;
+  let username;
+  let password;
+
+  while(!loggedIn){
+    username = window.prompt(`Enter your username`);
+    password = window.prompt(`Enter your password`);
+
+      if(username === "myUsername" && password === "myPassword"){
+        loggedIn = true;
+        console.log("You are logged in!")
+    }
+    else{
+      console.log("Invalid credentials!");
+    }
+  } THE 8TH ONE*/
