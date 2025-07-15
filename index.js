@@ -180,7 +180,7 @@ mySubmit.onclick = function(){
     }
   } TTHE 9TH ONE WITH GUESSING GAME */
 
-  const textBox = document.getElementById("textBox");
+ /* const textBox = document.getElementById("textBox");
   const toFahrenheit = document.getElementById("toFahrenheit");
   const toCelsius = document.getElementById("toCelsius");
   const result = document.getElementById("result");
@@ -200,4 +200,4 @@ mySubmit.onclick = function(){
     else{
       result.textContent = "Select a unit";
     }
-  }
+  } THE 10TH ONE WITH TEMP CONVERTOR*/
