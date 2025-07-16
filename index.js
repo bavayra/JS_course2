@@ -201,3 +201,21 @@ mySubmit.onclick = function(){
       result.textContent = "Select a unit";
     }
   } THE 10TH ONE WITH TEMP CONVERTOR*/
+
+  /*WE WILL PUT A NUMBER OF DICES INTO AN INPUT AND IT WILL GIVE US A RANDOM NUMBER AS MANY TIMES AS DICES WERE CHOSEN (ROLLED)*/
+
+  function rollDice(){
+    const numOfDice = document.getElementById("numOfDice").value;
+    const diceResult = document.getElementById("diceResult");
+    const diceImages = document.getElementById("diceImages");
+    const values = [];
+    const images = [];
+
+    for(let i = 0; i < numOfDice; i++){
+      const value = Math.floor(Math.random() * 6) + 1;
+      values.push(value);
+      images.push(`<img src="dice_images/${value}.png" alt="Dice ${value}">`);
+    }
+    diceResult.textContent = `dice: ${values.join(', ')}`
+    diceImages.innerHTML = images.join('');
+  }
