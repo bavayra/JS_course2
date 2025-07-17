@@ -202,7 +202,7 @@ mySubmit.onclick = function(){
     }
   } THE 10TH ONE WITH TEMP CONVERTOR*/
 
-  /*WE WILL PUT A NUMBER OF DICES INTO AN INPUT AND IT WILL GIVE US A RANDOM NUMBER AS MANY TIMES AS DICES WERE CHOSEN (ROLLED)*/
+  /*WE WILL PUT A NUMBER OF DICES INTO AN INPUT AND IT WILL GIVE US A RANDOM NUMBER AS MANY TIMES AS DICES WERE CHOSEN (ROLLED)
 
   function rollDice(){
     const numOfDice = document.getElementById("numOfDice").value;
@@ -219,3 +219,42 @@ mySubmit.onclick = function(){
     diceResult.textContent = `dice: ${values.join(', ')}`
     diceImages.innerHTML = images.join('');
   }
+    THE 11TH ONE WITH A DICE GAME*/
+
+    function generatePassword(length, includeLowercase, includeUppercase, includeNumbers,includeSymbols){     
+      
+      const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+      const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const numberChars = "0123456789";
+      const symbolChars = "!@#$^&*()_-+=";
+
+      let allowedChars = "";
+      let password = "";
+
+      allowedChars += includeLowercase ? lowercaseChars : "";
+      allowedChars += includeUppercase ? uppercaseChars : "";
+      allowedChars += includeNumbers ? numberChars : "";
+      allowedChars += includeSymbols ? symbolChars : "";
+
+      if (length <= 0){
+        return `(password length must be at least 1)`
+      }
+      if (allowedChars.length === 0){
+        return `(at least 1 set of chars needs to be selected)`
+      }
+
+      for(let i=0; i < length; i++){
+        const randomIndex = Math.floor(Math.random() * allowedChars.length);
+        password += allowedChars[randomIndex]
+      }
+      return password;
+    }
+
+    const passwordLength = 12;
+    const includeLowercase = true;
+    const includeUppercase = true;
+    const includeNumbers = true;
+    const includeSymbols = true;
+
+    const password = generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumbers,includeSymbols);
+    console.log(`Generated password: ${password}`);
