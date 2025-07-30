@@ -113,7 +113,7 @@ input{
 }
    THE 11TH ONE WITH A DICE GAME*/
 
-   body{
+   /*body{
     margin: 0;
     background-image: url(background.jpg);
     background-position: center;
@@ -152,3 +152,92 @@ input{
         0 0 30px #bf7fff;
     width: 100%;
   }
+   THE 14TH LESSON*/
+
+   body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(ow.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+   }
+
+   #myH1 {
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(244, 157, 27);
+    border: 3px solid rgba(61, 70, 75);
+    background-color: rgba(61, 70, 75, 0.8);
+    padding: 30px;
+    border-radius: 50px;
+   }
+
+   #container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: 3px solid rgba(61, 70, 75);
+    border-radius: 50px;
+    padding: 30px;
+    background-color: rgba(61, 70, 75, 0.7);
+    text-align: center;
+    width: fit-content;      
+    max-width: 90%;    
+    height: auto;    
+   }
+
+   #display{
+    font-size: 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: semi-bold;
+    color: rgb(244, 157, 27);
+    text-shadow: 2px 2px 2px rgba(61, 70, 75, 0.7);
+    margin-bottom: 25px;
+   }
+
+   #controls button{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    min-width: 125px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgba(61, 70, 75);
+    transform: background-color 0.7s ease;
+   }
+
+   #startBtn {
+    background-color: rgb(102, 155, 11);
+   }
+
+   #startBtn:hover {
+    background-color: rgb(83, 125, 10);
+   }
+
+   #stopBtn {
+    background-color:rgb(205, 81, 36);
+   }
+
+   #stopBtn:hover {
+    background-color: rgb(159, 62, 26);
+   }
+
+   #resetBtn {
+    background-color: rgb(244, 157, 27);
+   }
+
+   #resetBtn:hover {
+    background-color: rgb(192, 121, 14);
+   }
+
