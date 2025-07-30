@@ -113,3 +113,42 @@ input{
 }
    THE 11TH ONE WITH A DICE GAME*/
 
+   body{
+    margin: 0;
+    background-image: url(background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   }
+
+  #clock-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 2px solid;
+  }
+
+  #clock {
+    font-family: monospace;
+    font-size: 6.5rem; 
+    font-weight: bold;
+    text-align: center;
+    color: rgb(105, 9, 215);
+    background-color: rgba(229, 148, 239, 0.834);
+    backdrop-filter: blur(1px);
+    padding: 20px 40px;
+    border-radius: 6px;
+    border: 3px solid rgb(105, 9, 215);
+    text-shadow: 
+        0 0 5px #9d4dff,
+        0 0 10px #9d4dff,
+        0 0 20px #bf7fff,
+        0 0 40px #bf7fff;
+    box-shadow: 
+        0 0 10px #9d4dff,
+        0 0 20px #bf7fff,
+        0 0 30px #bf7fff;
+    width: 100%;
+  }

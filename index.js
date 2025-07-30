@@ -261,7 +261,7 @@ mySubmit.onclick = function(){
     THE 12TH ONE WITH A  RANDOM PASSWORD GENERATOR*/
 
 
-    function createCounter(){
+    /*function createCounter(){
 
       let count = 0;
 
@@ -270,20 +270,37 @@ mySubmit.onclick = function(){
           console.log(`Count increased to ${count}`);
         }
 
-        function getCount(){ /*We had to add this function because properties are private and we cant get the exact counter since its hidden, so we create a function that has access to it and envoke this function */
+        function getCount(){ 
           return count;
         }
 
-        return {increment, getCount}; /*возвращаем объект, потому что в него можно положить другие штуки (сколько угодно) (decriment, reset, get value atd -> not builtins, just different types of methods used for one function)*/
+        return {increment, getCount};
       }
 
       const counter = createCounter();
 
-        /*increment() -> if we call this function again, it will show the same result (1), its resetting it every time we call a function, with closure we can maintain the state of the variable*/
+      increment() -> if we call this function again, it will show the same result (1), its resetting it every time we call a function, with closure we can maintain the state of the variable
 
         counter.increment();
         counter.increment();
 
         console.log(`The current count is ${counter.getCount()}`);
 
-        /*функия ceateCounter вызывается, внутри нее переменная count. СОздается функция Increment, которая увеличивает count на 1 и выводит в консоль.Переменная count локальна для createCounter, но из-за того, что Increment использует count, они замыкаются.*/
+      функия ceateCounter вызывается, внутри нее переменная count. СОздается функция Increment, которая увеличивает count на 1 и выводит в консоль.Переменная count локальна для createCounter, но из-за того, что Increment использует count, они замыкаются.*/
+  
+      /*We had to add  function getCount because properties are private and we cant get the exact counter since its hidden, so we create a function that has access to it and envoke this function. 
+      Возвращаем именно объект, потому что в него можно положить другие штуки (сколько угодно) (decriment, reset, get value atd -> not builtins, just different types of methods used for one function) 
+      THE 13TH*/
+
+function updateClock(){
+  const now = new Date();
+  const hours=now.getHours().toString().padStart(2,0); /* getHours, getMinutes etc - builtins of the Date method*/
+  const minutes = now.getMinutes().toString().padStart(2,0); /* padStart - a builtin that works ONLY WITH STRINGS, it will add numbers in the start(thats why padSTART). In this case it will see if the number has 2 digits(2, 0), if not it will add digits to the beginning until the number has two digits, and the digit it will be adding is 0 (2,0)*/
+  const seconds = now.getSeconds().toString().padStart(2,0);
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  document.getElementById("clock").textContent = timeString;
+}      
+
+updateClock();
+setInterval(updateClock, 1000); /* a builtin function, it works like setTimeout, but it will call the function repeatedly. We need a callback and time of the interval in ms */
+      
