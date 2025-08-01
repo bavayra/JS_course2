@@ -304,7 +304,7 @@ setInterval(updateClock, 1000); //a builtin function, it works like setTimeout, 
       THE 14TH LESSON
       */
 
-  const display = document.getElementById("display");
+ /* const display = document.getElementById("display");
   let timer = null;
   let startTime = 0;
   let elapsedTime = 0;
@@ -347,4 +347,14 @@ function update(){
   milliseconds = String(milliseconds).padStart(2, "0");
 
   display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
-}
+} THE 15TH WITH STOPWATCH PROGRAM */
+
+import {PI, getCircumference, getArea, getVolume} from './mathUtil.js';
+
+console.log(PI);
+
+const circumference = getCircumference(10);
+console.log(circumference.toFixed(2));
+
+const volume = getVolume(10);
+console.log(volume);

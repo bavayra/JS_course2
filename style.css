@@ -154,7 +154,7 @@ input{
   }
    THE 14TH LESSON*/
 
-   body{
+   /*body{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -239,5 +239,7 @@ input{
 
    #resetBtn:hover {
     background-color: rgb(192, 121, 14);
-   }
+   } THE 15TH WITH STOPWATCH PROGRAM*/
+
+   
 

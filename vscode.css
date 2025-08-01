@@ -1,0 +1,10 @@
+body {
+    background: url("/wp.jpg") no-repeat center center fixed !important;
+    background-size: cover !important;
+    opacity: 0.95 !important;
+}
+
+.monaco-workbench, .part.editor, .editor-group-container {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+    backdrop-filter: blur(6px);
+}
