@@ -240,6 +240,70 @@ input{
    #resetBtn:hover {
     background-color: rgb(192, 121, 14);
    } THE 15TH WITH STOPWATCH PROGRAM*/
+  body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+     background-color: rgb(195, 205, 220);
+  }
 
+  #calculator{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(144, 174, 216);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+  }
+
+  #display{
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: rgb(95, 113, 137);
+    color: white;
+  }
+
+   #keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+   } 
+
+   button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(70, 66, 66);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+   }
+
+   button:hover{
+    background-color: rgb(95, 102, 109);
+   }
+
+   button:active{
+    background-color: rgb(75, 95, 114);
+   }
+
+   .operator-btn{
+    background-color: rgb(42, 85, 138);
+   }
    
+   .operator-btn:hover{
+    background-color: rgb(76, 113, 158);
+   }
+
+  .operator-btn:active{
+    background-color: rgb(15, 63, 122);
+   }
+
 

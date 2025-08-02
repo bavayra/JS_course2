@@ -349,7 +349,7 @@ function update(){
   display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
 } THE 15TH WITH STOPWATCH PROGRAM */
 
-import {PI, getCircumference, getArea, getVolume} from './mathUtil.js';
+/*import {PI, getCircumference, getArea, getVolume} from './mathUtil.js';
 
 console.log(PI);
 
@@ -357,4 +357,22 @@ const circumference = getCircumference(10);
 console.log(circumference.toFixed(2));
 
 const volume = getVolume(10);
-console.log(volume);
+console.log(volume);*/
+
+const display = document.getElementById("display");
+
+function appendToDisplay(input){
+  display.value += input;
+}
+
+function clearDisplay(){
+  display.value = "";
+}
+
+function calculate(){
+  try {display.value = eval(display.value);
+  }
+  catch(error){
+    display.value = "Error";
+  }
+}
