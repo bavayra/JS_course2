@@ -357,9 +357,9 @@ const circumference = getCircumference(10);
 console.log(circumference.toFixed(2));
 
 const volume = getVolume(10);
-console.log(volume);*/
+console.log(volume); HE 15TH WITH STOPWATCH PROGRAM*/
 
-const display = document.getElementById("display");
+/*const display = document.getElementById("display");
 
 function appendToDisplay(input){
   display.value += input;
@@ -376,3 +376,4 @@ function calculate(){
     display.value = "Error";
   }
 }
+  THE 16TH WITH CALCULATOR */
