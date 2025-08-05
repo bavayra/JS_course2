@@ -377,3 +377,31 @@ function calculate(){
   }
 }
   THE 16TH WITH CALCULATOR */
+
+  const myBox = document.getElementById("myBox");
+  const myBtn = document.getElementById("myBtn");
+
+  /*function changeColor(event){
+    event.target.style.backgroundColor = "white"; event.target - это элемент, на который кликнули, в данном случае это myBox.
+    event.target.textContent = "Love you!"
+    event.target.style.color = "pink";
+    event.target.style.border = "2px solid pink";
+  } ->> we can also do anarrow function*/
+
+  myBtn.addEventListener("click", event => {
+    myBox.style.backgroundColor = "white";
+    myBox.textContent = "Love you!"
+    myBox.style.color = "pink";
+    myBox.style.border = "2px solid pink";});
+
+  myBtn.addEventListener("mouseover", event => {
+    myBox.style.backgroundColor = "lightpink";
+    myBox.style.color = "white";
+    myBox.textContent = "Do you know...";
+    });
+
+    myBtn.addEventListener("mouseout", event => {
+    myBox.style.backgroundColor = "rgb(235, 113, 192)"; 
+    myBox.style.color = "white";
+    myBox.textContent = "    Wait!";
+    });
