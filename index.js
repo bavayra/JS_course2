@@ -378,7 +378,7 @@ function calculate(){
 }
   THE 16TH WITH CALCULATOR */
 
-  const myBox = document.getElementById("myBox");
+ /* const myBox = document.getElementById("myBox");
   const myBtn = document.getElementById("myBtn");
 
   /*function changeColor(event){
@@ -386,7 +386,7 @@ function calculate(){
     event.target.textContent = "Love you!"
     event.target.style.color = "pink";
     event.target.style.border = "2px solid pink";
-  } ->> we can also do anarrow function*/
+  } ->> we can also do anarrow function
 
   myBtn.addEventListener("click", event => {
     myBox.style.backgroundColor = "white";
@@ -404,4 +404,48 @@ function calculate(){
     myBox.style.backgroundColor = "rgb(235, 113, 192)"; 
     myBox.style.color = "white";
     myBox.textContent = "    Wait!";
-    });
+    }); ---> THE 17TH*/
+
+    const myBox = document.getElementById("myBox");
+
+    //document.addEventListener("keydown", event => {
+     // myBox.textContent = "no hihik";
+      //myBox.style.fontSize = "3rem";
+      //myBox.style.backgroundColor = "tomato";
+    //}); 
+
+     //document.addEventListener("keyup", event => {
+     // myBox.textContent = "hihik";
+      //myBox.style.backgroundColor = "rgb(135, 178, 135)";
+   // }); 
+
+   const moveAmount = 10;
+   let x = 0;
+   let y = 0;
+
+   document.addEventListener("keydown", event => {
+    if(event.key.startsWith("Arrow")){
+
+      event.preventDefault();
+      switch(event.key){
+        case "ArrowUp":
+          y -= moveAmount;
+          break;
+
+        case "ArrowDown":
+          y += moveAmount;
+          break;
+
+        case "ArrowLeft":
+          x -= moveAmount;
+          break;  
+
+        case "ArrowRight":
+          x += moveAmount;
+          break;
+      }
+
+      myBox.style.top = `${y}px`;
+      myBox.style.left = `${x}px`;
+    }
+   })

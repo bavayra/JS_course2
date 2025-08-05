@@ -308,7 +308,7 @@ input{
 
 THE 16TH WITH CALCULATOR */
 
-body{
+/*body{
   background-color: rgba(87, 30, 74, 0.409);
 }
 
@@ -333,4 +333,19 @@ body{
   border: none;
   margin-top: 40px;
   margin-left: 20px;
-} 
+} THE 17TH*/
+
+body{
+  margin: 0;
+}
+ 
+#myBox {
+  background-color: rgb(135, 178, 135);
+  width: 200px;
+  height: 200px;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
