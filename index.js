@@ -577,3 +577,66 @@ buttons.forEach(button => {
     }   
   });
 }); THE 21ST PT2*/
+
+const choices = ["rock", "paper", "scissors"]; //its an array so it has indexes
+const playerDisplay = document.getElementById("playerDisplay");
+const computerDisplay = document.getElementById("computerDisplay");
+const resultDisplay = document.getElementById("resultDisplay");
+const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+let playerScore = 0;
+let computerScore = 0;
+
+function playGame(playerChoice){
+
+  const computerChoice = choices[Math.floor(Math.random() * 3)]; //computer choice will be a random index (from our array - 0,1,2, times 3 cuz we have 3 elements in the array) that will be rounded and give us one of those options according to its index, and that option will be stored within computerChoice
+  let result = "";
+
+  if(playerChoice === computerChoice){
+    result = "IT'S A TIE"
+  }
+  else{
+    switch(playerChoice){
+      case "rock":
+       result = (computerChoice === "scissors" ? "YOU WIN!" : "YOU LOSE =(");
+       break;
+      case "paper":
+       result = (computerChoice === "rock" ? "YOU WIN!" : "YOU LOSE =(");
+       break;
+      case "scissors":
+       result = (computerChoice === "paper" ? "YOU WIN!" : "YOU LOSE =(");
+       break;
+    }
+    }
+
+    playerDisplay.textContent = `PLAYER: ${playerChoice}`;
+    computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
+    resultDisplay.textContent = result;
+
+   // if(result === "YOU WIN!"){ //i did the color change depending on the resultby myself! but i found out about the Separation of concerns so it's not as good as teacher's
+    //  resultDisplay.style.color = "rgba(35, 134, 112, 0.64)";
+   // }
+   // else if(result === "YOU LOSE =("){
+   //   resultDisplay.style.color = "rgba(203, 33, 64, 0.51)";
+   // }
+   // else{
+   //   resultDisplay.style.color = "rgba(104, 92, 94, 0.8)";
+   // }
+  //}
+
+    resultDisplay.classList.remove("greenText", "redText"); //this is for resetting the color after each turn so the tie (undefined color) won't keep the color of th eprevious result
+    switch(result){
+      case "YOU WIN!":
+        resultDisplay.classList.add("greenText");
+        playerScore ++;
+        playerScoreDisplay.textContent = playerScore;
+        break;
+
+      case "YOU LOSE =(":
+        resultDisplay.classList.add("redText");
+        computerScore ++;
+        computerScoreDisplay.textContent = computerScore;
+        break;
+    }
+  }
+

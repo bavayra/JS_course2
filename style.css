@@ -424,3 +424,92 @@ THE 16TH WITH CALCULATOR */
   color: rgb(229, 146, 223);
 } THE 21 P.2*/
  
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 187, 255, 0.468);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size: 3rem;
+  color: rgb(202, 118, 202);
+}
+
+.choices{
+  margin-bottom: 40px;
+}
+
+.choices button{
+  height: 10vh;
+  width: 10vw;
+  border: none;
+  border-radius: 100%;
+  font-size: 1.3rem;
+  min-width: 160px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#rockBtn{
+  background-color: rgba(146, 142, 142, 0.667);
+  color: rgb(90, 86, 86);
+}
+
+#rockBtn:hover{
+  background-color: rgba(110, 106, 106, 0.815);
+}
+
+#paperBtn{
+  background-color: rgba(236, 223, 177, 0.763);
+  color: rgb(133, 126, 100);
+}
+
+#paperBtn:hover{
+  background-color: rgba(185, 174, 134, 0.801);
+}
+
+#scissorsBtn{
+  background-color: rgba(122, 180, 209, 0.648);
+  color: rgba(80, 133, 160, 0.977);
+}
+
+#scissorsBtn:hover{
+  background-color: rgba(97, 149, 175, 0.783);
+}
+
+#playerDisplay, #computerDisplay{
+  font-size: 1.7rem;
+  margin: 10px;
+  color: rgb(202, 118, 202);
+  font-weight: bold;
+}
+
+#resultDisplay{
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.scoreDisplay{
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: rgb(202, 118, 202);
+  font-weight: bold;
+}
+
+.greenText, #playerScoreDisplay {
+  color: rgba(35, 134, 112, 0.64);
+}
+
+.redText, #computerScoreDisplay{
+  color:rgba(203, 33, 64, 0.51);
+}
+
+
+
+
