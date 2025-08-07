@@ -524,7 +524,7 @@ function calculate(){
   });
  }); THE 20TH WITH NODELISTS */
 
- const myBtn = document.getElementById("myBtn");
+ //const myBtn = document.getElementById("myBtn");
  //myBtn.classList.add("enabled"); //we didnt add this class via css or html, we changed it dynamically w/ js
  //myBtn.classList.remove("enabled"); //the same as above
  
@@ -538,13 +538,42 @@ function calculate(){
   //event.target.classList.remove("hover"); //just like this we can switch between applied css properties.
 //});// OR WE CAN USE "TOGGLE" INSTEAD OF "ADD AND REMOVE", IT WILL DO THE SAME
 
-myBtn.classList.add("enabled");
+//myBtn.classList.add("enabled"); //the class that the button has had initially
 
-myBtn.addEventListener("click", event =>{
-  if(event.target.classList.contains("disabled")){ //we access the class list of the targeted element and check if it has the chosen class
-    event.target.textContent += "hihik"; //if yes - we are gonna add hihik to the text content, if not - see else
-  }
-  else {
-    event.target.classList.replace("enabled", "disabled"); //we just pick which class should replace another one. If the element doesn't have a disabled class, it will replace the enabled class with disabled.
-  };
+//myBtn.addEventListener("click", event =>{
+  //if(event.target.classList.contains("disabled")){ //we access the class list of the targeted element and check if it has the chosen class
+   // event.target.textContent += "hihik"; //if yes - we are gonna add hihik to the text content, if not - see else
+  //}
+  //else {
+   // event.target.classList.replace("enabled", "disabled"); //we just pick which class should replace another one. If the element doesn't have a disabled class, it will replace the enabled class with disabled.
+ // }; //SO WE HAVE THE BUTTON ENABLED, THEN WE CLICK ON IT, THE METHOD CHECKS IF THE BUTTON HAS DISABLED CLASS ON (it doesnt yet). IF IT HAS, THEN IT WILL ADD HIHIK. BUT OUR BUTTON HAS ENABLED CLASS FROM THE BEGINNING, SO THE PART OF THE CODE WITH else WILL RUN AND IT WILL REPLACE "ENABLED" CLASS WITH "DISABLED", THEN THE CODE WE WROTE FOR "DISABLE" WILL WORK AND IT WILL ADD THE HIHIK 
+//}); --> THE 21ST P1.
+
+/*let buttons = document.querySelectorAll(".myBtns");
+
+buttons.forEach(button => {
+  button.classList.add("enabled");
 });
+
+buttons.forEach(button => {
+  button.addEventListener("mouseover", event => {
+    event.target.classList.toggle("hover"); //the button will do the staff written in css for the mentioned class (hover), it will keep (at this point) the properties UNTIL we hover over it again (then it will go back to its initial state)
+  });// toggle - переключатель, который вкл или выкл определенный класс (в нашем случае вкл и выкл ховер)
+});
+
+buttons.forEach(button => {
+  button.addEventListener("mouseout", event => {
+    event.target.classList.toggle("hover"); // with this code the button will go back to its initial state when we leave the button (not when we have to hover over it again)
+});
+});
+
+buttons.forEach(button => {
+  button.addEventListener("click" , event => {
+    if(event.target.classList.contains("disabled")){
+      event.target.textContent += "hihik";
+    }
+    else{
+    event.target.classList.replace("enabled", "disabled");
+    }   
+  });
+}); THE 21ST PT2*/

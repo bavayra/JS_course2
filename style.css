@@ -401,7 +401,7 @@ THE 16TH WITH CALCULATOR */
   color: silver;
 } THE 20TH WITH NODELISTS */
 
-#myBtn{
+/*.myBtns{
   font-size: 2rem;
   margin: 10px;
   border: none;
@@ -422,4 +422,5 @@ THE 16TH WITH CALCULATOR */
 .disabled{
   background-color: rgba(19, 110, 65, 0.806);
   color: rgb(229, 146, 223);
-}
+} THE 21 P.2*/
+ 
