@@ -406,7 +406,7 @@ function calculate(){
     myBox.textContent = "    Wait!";
     }); ---> THE 17TH*/
 
-    const myBox = document.getElementById("myBox");
+   /*  const myBox = document.getElementById("myBox");
 
     //document.addEventListener("keydown", event => {
      // myBox.textContent = "no hihik";
@@ -419,7 +419,7 @@ function calculate(){
       //myBox.style.backgroundColor = "rgb(135, 178, 135)";
    // }); 
 
-   const moveAmount = 10;
+  const moveAmount = 10;
    let x = 0;
    let y = 0;
 
@@ -448,4 +448,32 @@ function calculate(){
       myBox.style.top = `${y}px`;
       myBox.style.left = `${x}px`;
     }
-   })
+   })*/
+  
+    const myBtn = document.getElementById("myBtn");
+    const myImage = document.getElementById("myImage");
+
+    myBtn.addEventListener("click", event => {
+      //if(myImage.style.display === "none"){ //the display property will most likely remove the (in the case from the lesson, i have a pretty css here) image and move the button somehow so it won't reserve the space for theimage when we want it to be shown again. Instead of "display" we can use "visibility" (with visible/hidden properties) so the button will prolly remain at its initial position, see below
+        //myImage.style.display = ""; //here we can write "" instead of suggested "block", it will do the same the same thing but the 1st option will less likely crash the flow
+        //myBtn.textContent = "HIDE ME";
+      //}
+
+        if(myImage.style.visibility === "hidden"){ 
+        myImage.style.visibility = "visible"; 
+        myBtn.textContent = "HIDE ME";
+      }
+
+      //else{
+      //myImage.style.display = "none"; 
+     // myBtn.textContent = "SHOW ME";
+     // document.body.style.backgroundColor = " rgb(103, 26, 155)";
+      //}
+
+      else{
+      myImage.style.visibility = "hidden"; 
+      myBtn.textContent = "SHOW ME";
+      document.body.style.backgroundColor = " rgb(103, 26, 155)";
+      }
+
+    });

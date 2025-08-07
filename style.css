@@ -335,7 +335,7 @@ THE 16TH WITH CALCULATOR */
   margin-left: 20px;
 } THE 17TH*/
 
-body{
+/*body{
   margin: 0;
 }
  
@@ -343,9 +343,46 @@ body{
   background-color: rgb(135, 178, 135);
   width: 200px;
   height: 200px;
-  font-size: 4rem;
+  font-size: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+}*/
+
+body{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#myImage{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#myBtn{
+  z-index: 0;
+  width: 20vw;
+  height: 6vh;
+  background-color: rgb(103, 26, 155);
+  border: none;
+  border-radius: 5px;
+  color: #ff6dff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  box-shadow: 0 0 40px #ff2cff;
+  font-weight: bold;
+}
+
+#myBtn:hover{
+   background-color: #ff6dff;
+    color: rgb(103, 26, 155);
 }
