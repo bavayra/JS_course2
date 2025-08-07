@@ -448,9 +448,9 @@ function calculate(){
       myBox.style.top = `${y}px`;
       myBox.style.left = `${x}px`;
     }
-   })*/
+   }) THE 18TH*/
   
-    const myBtn = document.getElementById("myBtn");
+    /*const myBtn = document.getElementById("myBtn");
     const myImage = document.getElementById("myImage");
 
     myBtn.addEventListener("click", event => {
@@ -474,6 +474,52 @@ function calculate(){
       myImage.style.visibility = "hidden"; 
       myBtn.textContent = "SHOW ME";
       document.body.style.backgroundColor = " rgb(103, 26, 155)";
-      }
+      } 
 
-    });
+    });THE 19TH HIDE/SHOW */
+    
+
+    /*let buttons = document.querySelectorAll(".myButtons"); //if we want to select all the buttons (not only with that class), we can replace it with just "button"
+    
+   //buttons.forEach(button =>{
+    //button.style.backgroundColor = "tomato";
+    //button.textContent += " hihik";
+   //}); //how we can change/add html and css to the entire nodelist -> we can use forEach() to iterate through all the elements
+
+   //buttons.forEach(button => {
+    //button.addEventListener("click", event => {
+      //event.target.style.backgroundColor = "darkred"; //click event listener that changes the TARGETED element
+   // })
+   //})
+
+  // buttons.forEach(button => {
+    //button.addEventListener("mouseover", event => {
+      //event.target.style.backgroundColor = "rgba(8, 40, 8, 1)";
+    //});
+   //});
+
+   
+   //buttons.forEach(button => {
+    //button.addEventListener("mouseout", event => {
+      //event.target.style.backgroundColor = "rgb(10, 57, 10)"; //MOUSEOVER/MOUSEOUT EVENT LISTENERS
+    //});
+   //});
+
+ //  const newButton = document.createElement("button"); // while creating an appending html elements, there are 3 steps. <- it's the 1st STEP = create an element first
+   //newButton.textContent = "Button 5";//the 2nd STEP ->add properties or attributes
+  //newButton.classList = "myButtons"; //we assigned a new class to a button via classlist
+  //document.body.appendChild(newButton);//THE 3RD STEP -> We append the element to the DOM, since the parent element for buttons is body in this case, we append the element to it
+
+ // console.log(buttons); //if we were to console buttons as they are now, it would return the nodelist of 4 elements (even tho we added the 5th button), cuz nodelist is a static collection and it's not updating automatically
+
+ //buttons = document.querySelectorAll(".myButtons"); //so we will have to update it manually like this by just updating the class list from the beginning 
+ //console.log(buttons); HOW TO ADD AN ELEMENT
+
+ buttons.forEach(button => {
+  button.addEventListener("click", event => {
+    event.target.remove();
+    //console.log(buttons); // if we were to console it, even after removing all the elelements, the nodelist in console will show the initial number of elelements (in our case - 4), cuz its not updating automatically
+    buttons = document.querySelectorAll(".myButtons"); // so we will update it manually like we did when added a new element
+    console.log(buttons);
+  });
+ }); THE 20TH WITH NODELISTS */

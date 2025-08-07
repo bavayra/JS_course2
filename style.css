@@ -348,9 +348,9 @@ THE 16TH WITH CALCULATOR */
   justify-content: center;
   align-items: center;
   position: relative;
-}*/
+} THE 18TH*/
 
-body{
+/*body{
   margin: 0;
   height: 100vh;
   display: flex;
@@ -385,4 +385,19 @@ body{
 #myBtn:hover{
    background-color: #ff6dff;
     color: rgb(103, 26, 155);
+} THE 19TH HIDE/SHOW*/
+ 
+/*body{
+  margin: 0;
 }
+
+.myButtons{
+  font-size: 3rem;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 45px;
+  background-color: rgb(10, 57, 10);
+  color: silver;
+} THE 20TH WITH NODELISTS */
+ 
