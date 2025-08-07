@@ -523,3 +523,28 @@ function calculate(){
     console.log(buttons);
   });
  }); THE 20TH WITH NODELISTS */
+
+ const myBtn = document.getElementById("myBtn");
+ //myBtn.classList.add("enabled"); //we didnt add this class via css or html, we changed it dynamically w/ js
+ //myBtn.classList.remove("enabled"); //the same as above
+ 
+// myBtn.classList.add("hover"); //likethis it wont work, cuz it will just take the declared in css properties and apply it permanently, instead of only applying during the hover action
+
+//myBtn.addEventListener("mouseover", event => {
+ // event.target.classList.add("hover");
+//});
+
+//myBtn.addEventListener("mouseout", event => {
+  //event.target.classList.remove("hover"); //just like this we can switch between applied css properties.
+//});// OR WE CAN USE "TOGGLE" INSTEAD OF "ADD AND REMOVE", IT WILL DO THE SAME
+
+myBtn.classList.add("enabled");
+
+myBtn.addEventListener("click", event =>{
+  if(event.target.classList.contains("disabled")){ //we access the class list of the targeted element and check if it has the chosen class
+    event.target.textContent += "hihik"; //if yes - we are gonna add hihik to the text content, if not - see else
+  }
+  else {
+    event.target.classList.replace("enabled", "disabled"); //we just pick which class should replace another one. If the element doesn't have a disabled class, it will replace the enabled class with disabled.
+  };
+});
