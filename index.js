@@ -683,7 +683,7 @@ function nextSlide(){
 }
 THE 23RD WITH SLIDERS*/
 
-function walkDog(){ //here should be a callback if we are usung callback hell
+/*function walkDog(){ //here should be a callback if we are usung callback hell
  
   return new Promise((resolve, reject) => {// this is a NEW line we add if we use method chaining + promises, not the callback hell. Also we put an ansync function (here setTimeout) inside the new promise (which is an obj). and we dont need callback anymore
     setTimeout(() => { 
@@ -741,7 +741,81 @@ function takeOutTrash(){
   //})
   //}) -> this is a "classic way" of how not to do it cuz might possibly cause a callback hell so we better use promises (using method chaining)
 
-walkDog().then(value => {console.log(value); return cleanKitchen()}) //while using the method chaining, if one of the functions got rejected, we won't attempt to do the next ones, the code will stop 
-        .then(value => {console.log(value); return takeOutTrash()})
+walkDog().then(value => {console.log(value); return cleanKitchen()}) //while using the method chaining, if one of the functions got rejected, we won't attempt to do the next ones, the code will stop  
+        .then(value => {console.log(value); return takeOutTrash()}) //we are using THEN to process the resolve option, and CATCH for reject
         .then(value => {console.log(value); console.log("You finished all the chores")})
         .catch(error => console.error(error)); //if we add reject, we will need a catch method to catch all the rejections aka errors
+          THE 24TH WITH PROMISES AND METHOD CHAINING*/
+
+  /*function walkDog(){ 
+ 
+  return new Promise((resolve, reject) => {
+      const dogWalked = true;
+
+      if(dogWalked){
+          resolve("You walked your dog"); 
+      }
+      else{
+        reject("You didn't walk the dog");
+      }
+    }, 1500);
+      };
+
+function cleanKitchen(){
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+
+      const kitchenCleaned = true;
+
+      if(kitchenCleaned){
+      resolve("You cleaned the kitchen");
+  }
+    else{
+      reject("You didn't clean the kitchen");
+    }
+  },
+  2500);
+  });
+}
+
+function takeOutTrash(){
+  return new Promise ((resolve, reject) => {
+   
+    setTimeout(() => {
+       const trashTaken = false;
+
+       if(trashTaken){
+        resolve("You took out all the trash");
+  }
+      else{
+        reject("You didn't take trash out");
+      }
+    }, 500);
+  });
+}
+
+async function doChores(){
+
+  try{
+  const walkDogResult = await walkDog();
+  console.log(walkDogResult);
+
+  const cleanKitchenResult = await cleanKitchen();
+  console.log(cleanKitchenResult);
+
+  const takeOutTrashResult = await takeOutTrash();
+  console.log(takeOutTrashResult);
+
+  console.log("You finished all the chores");
+  }
+  catch(error){
+    console.error(error);
+  }
+} //since async/await dont have a reject property, we need to catch all the errors ourselves, so we will put a try{} inside the async function and after try{} catch all the errors
+
+
+//walkDog().then(value => {console.log(value); return cleanKitchen()}) //We dont need it if we use async/await, we can write it in a synchronous manner
+       // .then(value => {console.log(value); return takeOutTrash()}) 
+       // .then(value => {console.log(value); console.log("You finished all the chores")})
+      //  .catch(error => console.error(error)); 
+  doChores()  THE 25 WITH AWAIT/ASYNC */
