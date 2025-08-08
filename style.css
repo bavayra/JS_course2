@@ -424,7 +424,7 @@ THE 16TH WITH CALCULATOR */
   color: rgb(229, 146, 223);
 } THE 21 P.2*/
  
-body{
+/*body{
   margin: 0;
   padding: 0;
   background-color: rgba(255, 187, 255, 0.468);
@@ -508,7 +508,54 @@ h1{
 
 .redText, #computerScoreDisplay{
   color:rgba(203, 33, 64, 0.51);
+} THE 22ND WITH RPS GAME*/
+
+.slider{
+  position: relative;
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
 }
+
+.slider img{
+  width: 100%;
+  display: none;
+}
+
+.prev, 
+.next{
+  background-color: rgba(110, 107, 104, 0.306);
+  color: rgb(216, 124, 18);
+  font-size: 1.8rem;  
+  border:none;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.prev{
+  left: 0;
+}
+
+.next{
+  right: 0;
+}
+
+img.displaySlide{
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade { 
+  from {opacity: .5}
+  to {opacity: 1;}  
+}
+
 
 
 

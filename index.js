@@ -578,7 +578,7 @@ buttons.forEach(button => {
   });
 }); THE 21ST PT2*/
 
-const choices = ["rock", "paper", "scissors"]; //its an array so it has indexes
+/*const choices = ["rock", "paper", "scissors"]; //its an array so it has indexes
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
@@ -639,4 +639,44 @@ function playGame(playerChoice){
         break;
     }
   }
+THE 22ND WITH RPS GAME */
 
+const slides = document.querySelectorAll(".slides img");
+let slideIndex = 0; //we will be displaying an img according to its index that will increment every step until index is >= the length of the nodelist, then it will reset back to 0
+
+let intervalId = null; //we set an interval which is like a timer and it will run the code every N ms. We will put this timer inside a variable( here - interval id). This variable will store the interval Id, and arrow function with the setInterval method and the code that will run while the timer is ticking
+
+//initializeSlider(); but it's not the bets way since it can break the flow or something, better the one below
+
+document.addEventListener("DOMContentLoaded", initializeSlider); // this will let the rest of the content load (with that event DOMContentLoaded) and THEN it will initilize the display of slider
+
+function initializeSlider(){
+  if(slides.length > 0){ //to avoid the display of crashed images, we can use if statements. If there is no slides, the code wont run
+  slides[slideIndex].classList.add("displaySlide");
+  intervalId = setInterval(nextSlide, 5000);
+}
+}
+
+function showSlide(index){ //index of the next slide we would like to go to
+  if(index >= slides.length){ //if we reache the end of the slides, we want to reset the index
+      slideIndex = 0;
+  }
+  else if( index < 0){
+    slideIndex = slides.length - 1; //if we are at the 1st slide and we hit a previous button, it will reditrect us to the last slide
+  }
+
+  slides.forEach(slide => {
+    slide.classList.remove("displaySlide"); //if its time to move to another slide, we dont wanna display the current slide.
+  });
+  slides[slideIndex].classList.add("displaySlide");
+}
+
+function prevSlide(){
+  slideIndex--;
+    showSlide(slideIndex);
+}
+
+function nextSlide(){
+  slideIndex++;
+  showSlide(slideIndex);
+}
