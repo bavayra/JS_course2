@@ -641,7 +641,7 @@ function playGame(playerChoice){
   }
 THE 22ND WITH RPS GAME */
 
-const slides = document.querySelectorAll(".slides img");
+/*const slides = document.querySelectorAll(".slides img");
 let slideIndex = 0; //we will be displaying an img according to its index that will increment every step until index is >= the length of the nodelist, then it will reset back to 0
 
 let intervalId = null; //we set an interval which is like a timer and it will run the code every N ms. We will put this timer inside a variable( here - interval id). This variable will store the interval Id, and arrow function with the setInterval method and the code that will run while the timer is ticking
@@ -672,11 +672,76 @@ function showSlide(index){ //index of the next slide we would like to go to
 }
 
 function prevSlide(){
+  clearInterval(intervalId);
   slideIndex--;
-    showSlide(slideIndex);
+  showSlide(slideIndex);
 }
 
 function nextSlide(){
   slideIndex++;
   showSlide(slideIndex);
 }
+THE 23RD WITH SLIDERS*/
+
+function walkDog(){ //here should be a callback if we are usung callback hell
+ 
+  return new Promise((resolve, reject) => {// this is a NEW line we add if we use method chaining + promises, not the callback hell. Also we put an ansync function (here setTimeout) inside the new promise (which is an obj). and we dont need callback anymore
+    setTimeout(() => { 
+      const dogWalked = true;
+
+      if(dogWalked){
+          resolve("You walked your dog"); //we replaced console.log with resolve function provided by promises (which is a function that returns a value)
+      }
+      else{
+        reject("You didn't walk the dog");
+      }
+    }, 1500);
+      });
+    }
+
+
+function cleanKitchen(){
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+
+      const kitchenCleaned = true;
+
+      if(kitchenCleaned){
+      resolve("You cleaned the kitchen");
+  }
+    else{
+      reject("You didn't clean the kitchen");
+    }
+  },
+  2500);
+  });
+}
+
+function takeOutTrash(){
+  return new Promise ((resolve, reject) => {
+   
+    setTimeout(() => {
+       const trashTaken = true;
+
+       if(trashTaken){
+        resolve("You took out all the trash");
+  }
+      else{
+        reject("You didn't take trash out");
+      }
+    }, 500);
+  });
+}
+
+//walkDog(() => {
+//  cleanKitchen(() => {
+  //  takeOutTrash(() => {
+    //  console.log("You finished all the chores");
+    //})
+  //})
+  //}) -> this is a "classic way" of how not to do it cuz might possibly cause a callback hell so we better use promises (using method chaining)
+
+walkDog().then(value => {console.log(value); return cleanKitchen()}) //while using the method chaining, if one of the functions got rejected, we won't attempt to do the next ones, the code will stop 
+        .then(value => {console.log(value); return takeOutTrash()})
+        .then(value => {console.log(value); console.log("You finished all the chores")})
+        .catch(error => console.error(error)); //if we add reject, we will need a catch method to catch all the rejections aka errors

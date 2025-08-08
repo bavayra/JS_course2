@@ -510,7 +510,7 @@ h1{
   color:rgba(203, 33, 64, 0.51);
 } THE 22ND WITH RPS GAME*/
 
-.slider{
+/*.slider{
   position: relative;
   width: 50%;
   margin: auto;
@@ -554,7 +554,7 @@ img.displaySlide{
 @keyframes fade { 
   from {opacity: .5}
   to {opacity: 1;}  
-}
+} THE 23RD WITH SLIDERS*/
 
 
 
